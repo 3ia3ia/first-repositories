@@ -33,9 +33,9 @@
 		<!--/favicon-->
 		
 	</head>
-	<body id="top">
-		<div id="wrapper">		
-			<header class="page_header wrapper">
+	<body id="top">	
+		<section class="header">
+			<header class="header__wrapper">
 				<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="my bloem"></a></h1>		
 				<div class="hamburger">
 					<span></span>
@@ -52,22 +52,26 @@
 						<li><a href="contact/contact.html">Contact</a></li>
 					</ul><!-- /.main_nav-->
 				</nav><!-- /.global_menu_sp-->
-			</header><!-- /.page_header wrapper-->
-			<main>
-				<div class="main_v">
-					<div id="box01">
-						<div id="box02">
-							<h2 id="page_title">一面の花々が織りなす<span>ハウステンボスの街並みへ</span></h2>
-							<img src="images/mainVisual.jpg" alt="my bloem" class="main_v">
-						</div><!--	/#box02-->
-					</div><!--	/#box01-->
-				</div><!--	/.main_v-->
-				<section id="about">
-					<h3 class="title01">What's here?</h3>
-					<p class="theme_park"><span>テ</span>ーマパークとして日本最大の面積を誇るハウステンボス。</p>
-					<p class="flower">あなたも一面の<span>花</span>が織りなすヨーロッパの街並みへ溶け込んでみませんか？</p>
-					<p class="goshoukai">フォトスポット・イベント・グルメまで見所を余すことなくご紹介</p>
-				</section><!-- /#about-->
+			</header><!-- /.header__wrapper-->
+		</section><!--/.header-->
+		<main>
+			<section class="mv">
+				<div class="mv__img">
+					<img src="images/mainVisual.jpg" alt="ハウステンボス">
+				</div>
+				<div>
+					<h2 class="mv__title">一面の花々が織りなすハウステンボスの街並みへ</h2>
+				</div>
+			</section><!--	/.mv-->
+			<section id="about">
+				<div class="about__title">
+					<div class="titleR"><h3>What's here?</h3></div>
+				</div>
+				<p class="theme_park"><span>テ</span>ーマパークとして日本最大の面積を誇るハウステンボス。</p>
+				<p class="flower">あなたも一面の<span>花</span>が織りなすヨーロッパの街並みへ溶け込んでみませんか？</p>
+				<p class="goshoukai">フォトスポット・イベント・グルメまで見所を余すことなくご紹介</p>
+				<div class="bg"></div>
+			</section><!-- /#about-->
 				<section id="photo_spot">
 					<h3 class="title">Photo spot</h3>
 						<div class="photo_left">
@@ -135,12 +139,11 @@
 					<p>お問合せは<br>フォームよりご連絡ください</p>
 					<a href="contact/contact.html"><img src="images/button.png" alt="お問い合わせ"></a>
 				</section>
-			</main>
+		</main>
 			<footer>
 				<p id="page_top"><a href="#top"><img src="images/page_top_icon.png" alt="ページトップへ"></a></p>
 				<p id="copy_r"><small>&copy;my bloem. All Rights Reserved.</small></p>
 			</footer>
-		</div><!-- /#wrapper-->
 		<!--jqueryコード-->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
