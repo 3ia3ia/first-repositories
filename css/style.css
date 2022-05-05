@@ -1,0 +1,574 @@
+@charset "UTF-8";
+/* 基本設定
+=========================*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	line-height: 1.6;
+	color: #2b2b2b;
+	font-size: 1.6rem;
+	font-family: serif;	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+a:link,
+a:visited {
+	color: #432;
+	text-decoration: none;
+}
+
+a:hover {
+	color: chocolate;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+#page_top {
+	position: fixed;/*位置固定*/
+	right: 20px;
+	bottom: 20px;
+	width: 11rem;
+	z-index: 1;
+}
+
+/*汎用クラス*/
+
+h3 {
+	font-family: serif;
+	font-size: 7.3rem;
+}
+
+section {
+	margin: 100px;
+}
+
+/* レイアウト
+=========================*/
+
+#wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+header #logo {
+	padding: 10px;
+	line-height: 1;/*bodyのline-height1.6に設定していたので余白が出る。それを直すため*/
+}
+
+header #logo img {
+	width: 18rem;/*←画像の大きさから計算して出した値*/
+}
+
+.main_nav {
+	display: flex;
+	font-size: 1.6rem;
+	margin-top: 34px;
+}
+
+.main_nav li {
+	margin-left: 36px;
+}
+
+.margin-nav a {
+	color: #432;
+}
+
+.main-nav a:hovor {
+	color: #0bd;
+}
+
+.page_header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;
+}
+
+/*main*/
+
+.main_v {
+	position: relative;
+}
+
+#box01 {
+	width: 1200px;
+	height: 900px;
+	background: rgb(255, 190, 219, .6);
+	position: relative;
+	top: 0px;
+	left: 0px;/*タグP248 relative入れてずらしたら、ずらした分だけ下と重なる*/
+}
+
+#box02 {
+	width: 1100px;
+	height: 750px;
+	margin-top: 50px;/*margin入れて上のボックスと重ならないようにしている*/
+	background: #f292bd;
+	position: relative;
+	top: 70px;
+	/*relative入れてずらしたら、ずらした分だけ下と重なる*/
+	/*タグP250 z-index入れたら数字が大きいほど上に来る*/
+}
+
+#page_title {
+	text-align: center;
+	font-size: 4.8rem;
+	color: #fff;
+	}
+
+.catch_copy h2 span {
+	display: block;
+	padding-left: 5em;
+}
+
+.page_header wrapper {
+	max-width: 1200px;
+	background-color: #ffbedb;
+}
+
+/*About*/
+.theme_park span {
+	font-size: 48px;
+	color: #af814b;
+}
+
+.flower span{
+	font-size: 48px;
+	color: #ed057d;
+}
+
+.goshoukai {
+	line-height: 76.8px;
+}
+
+/*Photo spot*/
+
+#photo_spot {
+	background-color: rgb(255, 241, 174, .3);
+}
+
+#timeTable {
+	margin: 50px;
+}
+
+.photo {
+	width: 580px;
+	/*margin: 0 auto;*/
+}
+
+.photo_left {
+	display: flex;
+}
+
+.photo_right {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.timeText {
+	width: 50%;
+	margin: 0 auto;
+}
+
+dt {
+	font-size: 48px;
+	margin: 10%;
+}
+
+dd {
+	margin:0 10%;
+}
+
+/*Access*/
+
+#access {
+	padding: 4%, 0;
+}
+
+#access .wrapper {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.location_info {
+	width: 50%;
+}
+
+.location_info p {
+	padding: 12px 10px;
+}
+
+.location_map {
+	width: 50%;
+}
+
+iframe {
+	width: 100%;
+}
+
+/*Contact*/
+
+#contact p {
+	text-align: center;
+}
+
+.contact_button {
+	text-align: center;
+}
+
+#contact {
+	background: rgba(105, 189, 127, .35);
+}
+
+/*FOOTER*/
+footer {
+	background: rgba(105, 189, 127, .35);
+	text-align: center;
+	padding: 26px 0;
+}
+footer p {
+	font-size: 0.875rem;
+}
+
+/*Contactページ*/
+.page_title {
+	font-size: 52px;
+}
+
+#contact_wrapper {
+	background-image: url("../images/huistenbosch.jpg");
+	opacity: .9;
+	min-height: 100vh;
+}
+
+form div {
+	margin-bottom: 14px;
+}
+
+label {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+	display: block;
+}
+
+/*フォーム*/
+
+input[type="text"],
+input[type="email"],
+textarea {
+	background: rgba(255,255,255,.5);
+	border: 1px #fff solid;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1.6rem;
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 100%;
+	max-width: 240px;
+}
+
+textarea {
+	width: 100%;
+	max-width: 480px;
+	height: 9.6rem;
+}
+
+input[type="submit"] {
+	border: none;
+	cursor: pointer;
+	line-height: 1;
+}
+
+.button {
+	display: inline-block;
+	padding: 0.5em 1em;
+ 	text-decoration: none;
+ 	border-radius: 4px;
+	color: #000000;
+	background-image: linear-gradient(#fdfbcd 0%, #fdfbcd 100%);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	border-bottom: solid 3px #fdfbcd;
+	text-align: center;
+	width: 60px;
+	height: 40px;
+}
+
+.button:hover,
+a.button:hover {
+	-webkit-transform: skew(0);
+	transform: skew(0);
+	color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+a.button radius {
+	border-radius: 100vh;
+}
+
+/*タブレット版*/
+@media (max-width: 850px) {
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+	
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+	
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+	
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+	
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+nav.global_menu_sp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #000;
+  background: #fff;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.6s;
+  width: 100%;
+}
+
+nav.global_menu_sp ul {
+  background: #ccc;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav.global_menu_sp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+	
+nav.global_menu_sp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+	
+nav.global_menu_sp ul li:hover{
+  background :#ddd;
+}
+
+nav.global_menu_sp ul li a {
+	display: block;
+	color: #000;
+	padding: 1em 0;
+	text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.global_menu_sp.active {
+  transform: translateY(0%);
+}
+	
+/*Contactページ*/
+	
+.page_title {
+	margin-top: 40px;		
+}
+
+	
+/*フォーム*/
+input[type="text"],
+input[type="email"] {
+	max-width: 100%;
+}
+	
+/*過去の残り*/
+.timeText {
+	width: 100%;
+	}
+.photo{
+	width: 100%;
+	}
+	
+dd {
+	margin: 10%;
+}
+	
+.access2{
+	display: flex;
+	flex-wrap: wrap;
+}
+.location .map {
+	display: flex;
+	flex-direction: row;
+}
+
+/*モバイル版*/
+@media (max-width: 600px) {
+
+/*HEADER*/
+	
+	.main-nav {
+	font-size: 1.2rem;
+	margin-top: 34px;
+	text-align: center;
+	list-style: none;
+	}
+	
+	.main-nav {
+	font-size: 0.8rem;
+	margin-top: 36px;
+	display: block;
+	
+	}
+	
+	.main-nav li {
+	font-size: 0.8rem;
+	display: block;
+	text-align: center;
+	margin-left: 36px;/*ナビの行間*/
+	}
+	
+	.page-header wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	}
+	
+	.main-nav li {
+		padding: 20px 0;
+	}
+	
+	.main-nav li a {
+	display: block;/*navi内の余白部分でもクリックできるように*/
+		line-height: 10px;
+	}
+		/*文字の上下に自動的に分散した余白が入る（1行のテキストにのみ有効）*/
+		
+	.page-title {
+	position: absolute;
+	left: 40%;
+	top: 80%;
+	width: 250px;
+	color: #fff;
+		
+	}
+	
+	dt {
+		padding: 5px;
+	}
+	
+	.concept, .timeTable, .gallery, .access, .contact1{
+		margin: 150px auto;
+	}
+	
+	.container {
+	display: block;
+	justify-content: center;
+	
+	}
+	
+	.concept {
+		display: block;
+	}
+	
+	#conceptPic1, #conceptPic2, #conceptPic3 {
+	width: 350px;
+	height: 300px;
+	margin: 0 auto;
+	}
+	
+
+	.timeD01{
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	
+	}
+	.timeD02{
+	margin: 0 auto;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	flex-wrap: wrap;
+	}
+	
+}
