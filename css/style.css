@@ -16,6 +16,7 @@ body {
 	color: #2b2b2b;
 	font-size: 1.6rem;
 	font-family: serif;	
+	width: 100vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,9 +63,9 @@ h3 {
 	font-size: 7.3rem;
 }
 
-section {
+/* section {
 	margin: 100px;
-}
+} */
 
 /* レイアウト
 =========================*/
@@ -74,7 +75,6 @@ section {
 	margin: 0 auto;
 }
 	
-
 .mv {
 	background-size: cover;
 }
@@ -111,12 +111,6 @@ header #logo img {
 .header__wrapper {
 	display: flex;
 	justify-content: space-between;
-}
-
-.wrapper {
-	max-width: 1100px;
-	margin: 0 auto;
-	padding: 0 4%;
 }
 
 /*main*/
@@ -156,26 +150,25 @@ header #logo img {
 	padding-left: 5em;
 }
 
-.page_header wrapper {
-	max-width: 1200px;
-	background-color: #ffbedb;
-}
-
 /*About*/
+
+#about {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
+}
 
 .about__title {
 	display: flex;
 	flex-direction: row-reverse;
 }
 
-
-
-.theme_park span {
+.camel_1 span {
 	font-size: 48px;
 	color: #af814b;
 }
 
-.flower span{
+.camel_2 span{
 	font-size: 48px;
 	color: #ed057d;
 }
@@ -186,12 +179,21 @@ header #logo img {
 
 /*Photo spot*/
 
-#photo_spot {
+.photo_spot__back {
 	background-color: rgba(255, 241, 174, .3);
 }
 
-#timeTable {
-	margin: 50px;
+.photo_spot__title {
+	display: flex;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
+}
+
+.photo_spot__article {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
 }
 
 .photo {
@@ -222,7 +224,46 @@ dd {
 	margin:0 10%;
 }
 
+/* gourmet */
+
+#gourmet {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
+}
+
+.gourmet__title {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.gourmet__image {
+	display: flex;
+	justify-content: center;
+}
+
+.item {
+	margin: 30px;
+	padding: 10px;
+}
+
 /*Access*/
+
+#access {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
+}
+
+.access__wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;
+}
+
+.access__title {
+	display: flex;
+}
 
 #access {
 	padding: 4%, 0;
@@ -236,6 +277,8 @@ dd {
 
 .location_info {
 	width: 50%;
+	padding: 40px 0 40px 40px;
+	line-height: 4rem;
 }
 
 .location_info p {
@@ -252,16 +295,24 @@ iframe {
 
 /*Contact*/
 
+.contact__title {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.contact__back {
+	background: rgba(105, 189, 127, .35);
+}
+
 #contact p {
 	text-align: center;
 }
 
 .contact_button {
 	text-align: center;
-}
-
-#contact {
-	background: rgba(105, 189, 127, .35);
 }
 
 /*FOOTER*/
@@ -283,6 +334,9 @@ footer p {
 	background-image: url("../images/huistenbosch.jpg");
 	opacity: .9;
 	min-height: 100vh;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 4%;/* スマホ向け余白の指定 */
 }
 
 form div {
@@ -343,7 +397,7 @@ input[type="submit"] {
 a.button:hover {
 	-webkit-transform: skew(0);
 	transform: skew(0);
-	color: #fff;
+	color: Brown;
 	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
 	box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
 }
@@ -547,27 +601,6 @@ dd {
 		padding: 5px;
 	}
 	
-	.concept, .timeTable, .gallery, .access, .contact1{
-		margin: 150px auto;
-	}
-	
-	.container {
-	display: block;
-	justify-content: center;
-	
-	}
-	
-	.concept {
-		display: block;
-	}
-	
-	#conceptPic1, #conceptPic2, #conceptPic3 {
-	width: 350px;
-	height: 300px;
-	margin: 0 auto;
-	}
-	
-
 	.timeD01{
 	margin: 0 auto;
 	width: 100%;
