@@ -190,6 +190,7 @@ header #logo img {
 
 .photo_spot__back {
 	background-color: rgba(255, 241, 174, .3);
+	padding: 10px 0;
 }
 
 .photo_spot__title {
@@ -201,7 +202,7 @@ header #logo img {
 
 .photo_spot__article {
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 5% auto;
 	padding: 0 4%;/* スマホ向け余白の指定 */
 }
 
@@ -218,46 +219,40 @@ header #logo img {
 .photo_left {
 	display: flex;
 	flex-basis: 100%;
+	margin-top: 10px;
 }
 
 .photo_right {
 	display: flex;
 	flex-direction: row-reverse;
 	flex-basis: 100%;
+	margin-top: 10px;
 }
 
 .back_r {
 	background-image: url("../images/photo__back_R.png");
 	max-width: 40%;
-	margin: 0 auto;
-	padding: 0 4%;/* スマホ向け余白の指定 */
+	padding: 1% 1%;/* スマホ向け余白の指定 */
 }
 
 .back_l {
 	background-image: url("../images/photo__back_L.png");
 	max-width: 40%;
-	margin: 0 auto;
-	padding: 0 4%;/* スマホ向け余白の指定 */
+	padding: 1% 1%;/* スマホ向け余白の指定 */
 }
 
-.back_r{
-	width: 40%;
-	margin: 0 auto;
-}
-
-.back_l{
-	width: 40%;
-	margin: 0 auto;
+.text_padding {
+	padding:30% 0;
 }
 
 dt {
-	font-size: 48px;
-	margin: 10%;
+	font-size: 45px;
+	padding-bottom: 70px;
 	color: #969696;
 }
 
 dd {
-	margin:0 10%;
+	padding: 0;
 }
 
 /* gourmet */
@@ -341,6 +336,7 @@ iframe {
 
 .contact__back {
 	background: rgba(105, 189, 127, .35);
+	padding: 100px 0; 
 }
 
 #contact p {
@@ -349,6 +345,7 @@ iframe {
 
 .contact_button {
 	text-align: center;
+	margin: 45px 0;
 }
 
 /*FOOTER*/
