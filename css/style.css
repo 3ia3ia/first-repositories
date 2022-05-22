@@ -52,7 +52,7 @@ img {
 	position: fixed;/*位置固定*/
 	right: 20px;
 	bottom: 20px;
-	width: 11rem;
+	width: 5rem;
 	z-index: 300;
 }
 
@@ -94,13 +94,14 @@ header #logo img {
 
 .main_nav li {
 	margin-left: 36px;
+	z-index: 400;
 }
 
-.margin-nav a {
+.main_nav a {
 	color: #432;
 }
 
-.main-nav a:hovor {
+.main_nav a:hovor {
 	color: #0bd;
 }
 
@@ -112,45 +113,27 @@ header #logo img {
 /*mv*/
 
 .mv {
-	position: relative;
+	/* position: relative; */
 	margin-bottom: 100px;
-}
-
-.mv__box01 {
 	width: 100%;
-	height: 950px;
-	background: rgba(255, 190, 219, .6);
-	position: relative;
-	top: 0px;
-	left: 0px;/*タグP248 relative入れてずらしたら、ずらした分だけ下と重なる*/
 }
 
-.mv__box02 {
-	width: 95%;
-	height: 825px;
-	margin-top: 50px;/*margin入れて上のボックスと重ならないようにしている*/
-	background: #f292bd;
-	position: relative;
-	top: 65px;
-	/*relative入れてずらしたら、ずらした分だけ下と重なる*/
-}
-
-.mv__box03 {
-	width: 95%;
-	position: relative;
-	top: 65px;
+.mv__box img {
+	width: 100%;
 	z-index: 100;
+}
+
+.mv__titlebox {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%,-50%);
 }
 
 .mv__title {
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2em;
 	color: #fff;
-	position: absolute;
-	left: 50%;
-	top: 8%;
-	transform: translate(-50%,-50%);
-	z-index: 200;
 }
 
 .catch_copy h2 span {
@@ -223,7 +206,6 @@ header #logo img {
 
 .photo img {
 	width: 100%;
-	height: 460px;
 } 
 
 .photo_left {
@@ -368,16 +350,24 @@ iframe {
 
 .contact__back {
 	background: rgba(105, 189, 127, .35);
-	padding: 100px 0; 
+	padding: 100px 0;
 }
 
 #contact p {
 	text-align: center;
+	position: relative;
 }
 
 .contact_button {
 	text-align: center;
 	margin: 45px 0;
+}
+
+.shadow {
+	background-color: #69bd7f;
+	position: absolute;
+	/* width: 300px;
+	height: 300px; */
 }
 
 
@@ -397,10 +387,11 @@ footer p {
 }
 
 #contact_wrapper {
+	width: 100%;
 	background-image: url("../images/huistenbosch.jpg");
+	background-size: cover;
 	opacity: .9;
 	min-height: 100vh;
-	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0 4%;/* スマホ向け余白の指定 */
 }
@@ -476,105 +467,118 @@ a.button radius {
 @media (max-width: 850px) {
 
 /*　ハンバーガーボタン　*/
+
 .hamburger {
-  display : block;
-  position: fixed;
-  z-index : 3;
-  right : 13px;
-  top   : 12px;
-  width : 42px;
-  height: 42px;
-  cursor: pointer;
-  text-align: center;
-}
-	
-.hamburger span {
-  display : block;
-  position: absolute;
-  width   : 30px;
-  height  : 2px ;
-  left    : 6px;
-  background : #555;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition   : 0.3s ease-in-out;
-  transition        : 0.3s ease-in-out;
-}
-	
-.hamburger span:nth-child(1) {
-  top: 10px;
-}
-	
-.hamburger span:nth-child(2) {
-  top: 20px;
-}
-	
-.hamburger span:nth-child(3) {
-  top: 30px;
-}
-
-/* ナビ開いてる時のボタン */
-.hamburger.active span:nth-child(1) {
-  top : 16px;
-  left: 6px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform   : rotate(-45deg);
-  transform        : rotate(-45deg);
-}
-
-.hamburger.active span:nth-child(2),
-.hamburger.active span:nth-child(3) {
-  top: 16px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform   : rotate(45deg);
-  transform        : rotate(45deg);
-}
-
-nav.global_menu_sp {
-  position: fixed;
-  z-index : 2;
-  top  : 0;
-  left : 0;
-  color: #000;
-  background: #fff;
-  text-align: center;
-  transform: translateY(-100%);
-  transition: all 0.6s;
-  width: 100%;
-}
-
-nav.global_menu_sp ul {
-  background: #ccc;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-}
-
-nav.global_menu_sp ul li {
-  list-style-type: none;
-  padding: 0;
-  width: 100%;
-  border-bottom: 1px solid #fff;
-}
-	
-nav.global_menu_sp ul li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-	
-nav.global_menu_sp ul li:hover{
-  background :#ddd;
-}
-
-nav.global_menu_sp ul li a {
+	position: fixed;
+	z-index : 3;
+	right : 13px;
+	top   : 12px;
+	width : 42px;
+	height: 42px;
+	cursor: pointer;
+	text-align: center;
+  }
+  .hamburger span {
+	display : block;
+	position: absolute;
+	width   : 30px;
+	height  : 2px ;
+	left    : 6px;
+	background : #555;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition   : 0.3s ease-in-out;
+	transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+	top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+	top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+	top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+	top : 16px;
+	left: 6px;
+	background :#fff;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform   : rotate(-45deg);
+	transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+	top: 16px;
+	background :#fff;
+	-webkit-transform: rotate(45deg);
+	-moz-transform   : rotate(45deg);
+	transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+	position: fixed;
+	z-index : 2;
+	top  : 0;
+	left : 0;
+	color: #fff;
+	background: rgba(0,0,0,0.7);
+	text-align: center;
+	width: 100%;
+	opacity: 0;
+	transition: opacity .6s ease, visibility .6s ease;
+  }
+  
+  nav.globalMenuSp ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+	transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+	padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover{
+	background :#ddd;
+  }
+  
+  nav.globalMenuSp ul li a {
 	display: block;
-	color: #000;
+	color: #fff;
 	padding: 1em 0;
 	text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+	opacity: 100;
+  }
+
+ .main_nav {
+	display : block;
+	z-index: 400;
+ }
+  /* mainV */
+
+  .mv__titlebox {
+	position: absolute;
+	left: 50%;
+	top: 33%;
+	transform: translate(-50%,-50%);
 }
 
-/* このクラスを、jQueryで付与・削除する */
-nav.global_menu_sp.active {
-  transform: translateY(0%);
+ .mv__title {
+	text-align: center;
+	font-size: 2.5rem;
+	color: #fff;
 }
 
 /* photo spot */
@@ -605,6 +609,16 @@ nav.global_menu_sp.active {
 	width: 100%;
 }
 
+/* access */
+
+#access .wrapper {
+	flex-direction: column;
+}
+
+.location_info,.location_map {
+	width: 100%;
+}
+
 /*Contactページ*/
 	
 .page_title {
@@ -616,95 +630,28 @@ input[type="text"],
 input[type="email"] {
 	max-width: 100%;
 }
-	
-/*過去の残り*/
-.timeText {
-	width: 100%;
-	}
-	
-dd {
-	margin: 10%;
-}
-	
-.access2{
-	display: flex;
-	flex-wrap: wrap;
-}
-.location .map {
-	display: flex;
-	flex-direction: row;
-}
 
 /*モバイル版*/
 @media (max-width: 600px) {
 
-/*HEADER*/
-	
-	.main-nav {
-	font-size: 1.2rem;
-	margin-top: 34px;
-	text-align: center;
-	list-style: none;
-	}
-	
-	.main-nav {
-	font-size: 0.8rem;
-	margin-top: 36px;
-	display: block;
-	
-	}
-	
-	.main-nav li {
-	font-size: 0.8rem;
-	display: block;
-	text-align: center;
-	margin-left: 36px;/*ナビの行間*/
-	}
-	
-	.page-header wrapper {
-		flex-direction: column;
-		align-items: center;
-	}
-	
-	}
-	
-	.main-nav li {
-		padding: 20px 0;
-	}
-	
-	.main-nav li a {
-	display: block;/*navi内の余白部分でもクリックできるように*/
-		line-height: 10px;
-	}
-		/*文字の上下に自動的に分散した余白が入る（1行のテキストにのみ有効）*/
-		
-	.page-title {
+/*mainV*/
+
+.mv__titlebox {
 	position: absolute;
-	left: 40%;
-	top: 80%;
-	width: 250px;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%,-50%);
+}
+
+ .mv__title {
+	text-align: center;
+	font-size: 1.9rem;
 	color: #fff;
-		
-	}
+}
+
 	
-	dt {
-		padding: 5px;
-	}
 	
-	.timeD01{
-	margin: 0 auto;
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-wrap: wrap;
 	
-	}
-	.timeD02{
-	margin: 0 auto;
-	width: 100%;
-	height: 40%;
-	display: flex;
-	flex-wrap: wrap;
-	}
+	
 	
 }
